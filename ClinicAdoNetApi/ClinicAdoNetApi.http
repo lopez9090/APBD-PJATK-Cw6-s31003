@@ -1,0 +1,6 @@
+@ClinicAdoNetApi_HostAddress = http://localhost:5036
+
+GET {{ClinicAdoNetApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
