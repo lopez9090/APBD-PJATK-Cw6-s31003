@@ -1,6 +1,23 @@
-@ClinicAdoNetApi_HostAddress = http://localhost:5036
+POST http://localhost:5036/api/Appointments
+Content-Type: application/json
 
-GET {{ClinicAdoNetApi_HostAddress}}/weatherforecast/
-Accept: application/json
+{
+  "idPatient": 1,
+  "idDoctor": 2,
+  "appointmentDate": "2026-05-20T10:30:00",
+  "reason": "Pierwsza wizyta testowa przez API"
+}
 
 ###
+PUT http://localhost:5036/api/Appointments/1
+Content-Type: application/json
+
+{
+  "appointmentDate": "2026-06-01T12:00:00",
+  "status": "Scheduled",
+  "reason": "Zmieniony powód wizyty",
+  "internalNotes": "Pacjent prosił o kontakt telefoniczny"
+}
+
+### 
+DELETE http://localhost:5036/api/Appointments/5
